@@ -20,8 +20,10 @@ async function run() {
 
         const s3Client = new S3Client({
             region: s3Region,
-            accessKeyId: s3AccessKeyID,
-            secretAccessKey: s3SecretAccessKey
+            credentials: {
+                accessKeyId: s3AccessKeyID,
+                secretAccessKey: s3SecretAccessKey
+            }
         });
 
         await Promise.all(files.map(async (fileName, fileIndex) => {
