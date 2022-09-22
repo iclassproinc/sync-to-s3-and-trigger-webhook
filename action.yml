@@ -1,0 +1,27 @@
+name: 'Sync To S3 And Trigger Webhook'
+description: 'Sync To S3 And Trigger Webhook'
+inputs:
+  s3_bucket_name:
+    description: 'Name of S3 Bucket to upload to'
+    required: true
+  s3_aws_access_key_id:
+    description: 's3 private access key'
+    required: true
+  s3_aws_secret_access_key:
+    description: 's3 private secret'
+    required: true
+  s3_aws_region:
+    description: 'region to use for s3'
+    required: true
+  files:
+    description: 'multi-line input of files to upload'
+    required: true
+  keys:
+    description: 'multi-line input of names to put into the bucket, matched by index to files input'
+    required: true
+outputs:
+  files_updated: 
+    description: '# of files that needed to be updated'
+runs:
+  using: 'node16'
+  main: 'index.js'

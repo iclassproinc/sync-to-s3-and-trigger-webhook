@@ -1,0 +1,25 @@
+{
+  "name": "sync-to-s3-and-trigger-webhook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iclassproinc/sync-to-s3-and-trigger-webhook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iclassproinc/sync-to-s3-and-trigger-webhook/issues"
+  },
+  "homepage": "https://github.com/iclassproinc/sync-to-s3-and-trigger-webhook#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/github": "^5.0.3",
+    "@aws-sdk/client-s3": "^3.171.0"
+  }
+}
