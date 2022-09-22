@@ -43,7 +43,6 @@ async function run() {
                 }
             } catch (error) {
                 // object doesn't exist, upload
-                console.log(error);
             }
     
             const uploadCommand = new PutObjectCommand({
